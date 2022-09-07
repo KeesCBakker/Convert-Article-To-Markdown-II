@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../parsers/DevToParser.ts"],
+  "sourcesContent": ["import { DefaultParser } from './DefaultParser';\n\nexport class DevToParser extends DefaultParser {\n\n    canParse(url: URL) {\n        return url.hostname == \"dev.to\";\n    }\n\n    protected getArticleNode(document: Document): HTMLElement | null {\n      return document.querySelector('article .crayons-article__main')\n    }\n\n    protected getTagSelector() {\n        return \".crayons-tag\";\n    }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,2BAA8B;AAEvB,0BAA0B,mCAAc;AAAA,EAE3C,SAAS,KAAU;AACf,WAAO,IAAI,YAAY;AAAA;AAAA,EAGjB,eAAe,UAAwC;AAC/D,WAAO,SAAS,cAAc;AAAA;AAAA,EAGtB,iBAAiB;AACvB,WAAO;AAAA;AAAA;",
+  "names": []
+}

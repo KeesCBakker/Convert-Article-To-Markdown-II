@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../parsers/recipes/common.ts"],
+  "sourcesContent": ["export function capitalizeFirstLetter(str: string) {\n  if (!str) return str\n  return str.charAt(0).toUpperCase() + str.slice(1)\n}\n\nexport function capitalizeFirstLetterEndWithDot(str: string) {\n  if (!str) return str\n\n  str = str.charAt(0).toUpperCase() + str.slice(1).trim()\n  str = capitalizeFirstLetter(str)\n\n  if (!['.', '?', '!'].some(x => str.endsWith(x))) {\n    str += '.'\n  }\n  return str\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAAO,+BAA+B,KAAa;AACjD,MAAI,CAAC;AAAK,WAAO;AACjB,SAAO,IAAI,OAAO,GAAG,gBAAgB,IAAI,MAAM;AAAA;AAG1C,yCAAyC,KAAa;AAC3D,MAAI,CAAC;AAAK,WAAO;AAEjB,QAAM,IAAI,OAAO,GAAG,gBAAgB,IAAI,MAAM,GAAG;AACjD,QAAM,sBAAsB;AAE5B,MAAI,CAAC,CAAC,KAAK,KAAK,KAAK,KAAK,OAAK,IAAI,SAAS,KAAK;AAC/C,WAAO;AAAA;AAET,SAAO;AAAA;",
+  "names": []
+}

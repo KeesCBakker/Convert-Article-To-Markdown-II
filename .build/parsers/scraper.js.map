@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../parsers/scraper.ts"],
+  "sourcesContent": ["import fetch, { Headers } from 'node-fetch'\n\nexport async function scrape(url: string | URL) {\n\n  let headers = new Headers({\n\n  });\n\n  let f = await fetch(url, {\n    method: 'GET',\n    headers: headers,\n    redirect: 'follow',\n  })\n\n  let txt = await f.text()\n  return txt\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA+B;AAE/B,sBAA6B,KAAmB;AAE9C,MAAI,UAAU,IAAI,0BAAQ;AAI1B,MAAI,IAAI,MAAM,+BAAM,KAAK;AAAA,IACvB,QAAQ;AAAA,IACR;AAAA,IACA,UAAU;AAAA;AAGZ,MAAI,MAAM,MAAM,EAAE;AAClB,SAAO;AAAA;",
+  "names": []
+}
